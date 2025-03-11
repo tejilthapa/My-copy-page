@@ -1,62 +1,74 @@
+/* General styles */
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     /* background-color: black; */
 }
+#bar
+{
+    display: none;
+}
+#check
+{
+    /* display: none; */
+}
+
 
 /* header starts here */
-#navbar
-{
-    width: 100%;
+
+/* Navbar styles */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    position:fixed;
     background-color: white;
-    border-bottom: 1px solid black;
+    padding: 15px 20px;
 }
-#navbar img
-{
+
+.logo a img{
+    /* color: white; */
     width: 175px;
+  /* height: px; */
 }
-#navbar div nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    white-space: nowrap;
+
+/* Nav links */
+.nav-links {
     list-style: none;
-    text-decoration: none;
-    font-size: 14px;
+    padding: 0;
+    display: flex;
 }
-#navbar div nav ul a{
-    text-decoration: none;
-    color: black;
+.icons{
+    word-spacing: 30px;
 }
-#navbar div nav ul a:hover
+.nav-links li {
+    margin: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 20px;
+    color: rgb(6, 1, 1);
+    font-size: 20px;
+    padding: 8px 18px;
+    transition: 0.3s;
+}
+.nav-links li a:hover {
+    color: #ff0000;
+    /* border-radius: 4px; */
+}
+.navbar .call
 {
-    color: red;
-    font-size: 14px;
-}
-#navbar .icons{
-    display: flex;
-    gap: 50px;
-    color: black;
-}
-#navbar .call{
-    display: flex;
-    gap: 5%;
     padding: 1%;
-    white-space: nowrap;
-    background-color: red;
+    border-radius: 40px;
     color: white;
-    border-radius: 20px;
-    font-size: 14px;
-    transition:1s ease-in;
+    background-color: red;
+    transition: 1s ease-in;
 }
-#navbar .call:hover{
+
+.navbar .call:hover{
     color: rgb(255, 0, 0);
     background-color: rgb(0, 0, 0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -64,7 +76,68 @@
     /* transform: rotate(45deg); */
     /* transform: skew(60deg); */
 }
+
+/* Toggle button (Hamburger Menu) */
+.menu-icon {
+    font-size: 28px;
+    color: rgb(10, 9, 9);
+    cursor: pointer;
+    display: none;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 430px) {
+    .logo a img{
+        width: 120px;
+    }
+    .menu-icon {
+        display: block;
+        color: black;
+    }
+    .icons{
+        display: none;
+    }
+    .call{
+        display: none;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px;
+    }
+    .nav-links li a:hover
+    {
+        /* color: #ff0000; */
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+        color: white;
+    }
+    .info{
+        justify-content: center;
+    }
+}
 /* header ends here */
+
 main{
     margin-top: 5%;
 }
@@ -72,7 +145,7 @@ h1{
     text-align: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 2px 2px 2px red;
-    padding: 50px;
+    padding-top: 0px;
 }
 #bikes div
 {

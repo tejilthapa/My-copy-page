@@ -6,32 +6,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header id="navbar">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
         <a href="/index.html"><img src="/bikewale.png" alt="logo"></a>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="">DEALERSHIPS</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="/Pages/catalog.html">CATALOG</a></li>
-                    <li><a href="">ABOUT US</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="icons">
-            <a href="/Pages/login.html"><i class="fa-solid fa-user"></i></a>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text">
-        </div>
-
-        <div class="call">
-            <i class="fa-solid fa-phone"> Call :- 1234567890</i>
-        </div>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            
+            <ul class="nav-links">
+                <li><a href="#container2">Delarships</a></li>
+                <li><a href="/Pages/catalog.html">Catalogue</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="/Pages/login.html">Login</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="search">
+            </div>
+            <div class="call">
+                <i class="fa-solid fa-phone"> Call :- 1234567890</i>
+            </div>
+        </nav>
 
     </header><hr>
 
-    <main>
-    <h1>Catalog</h1>
+    <main class="info">
+    <h1>Catalogue</h1>
     <div id="bikes">
         <div class="ktm">KTM DUKE 390  <br><br> 
             THIS IS A POWERFUL STREET MACHINE PRODUCING  <br> MAX POWER OF 42.9 BHP @ 9,000 RPM <br>39 Nm OF TORQUE @ 7,000 RPM
