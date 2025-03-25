@@ -97,3 +97,32 @@ main img
     width: 100%;
 }
 /* main ends here  */
+
+/* responsive */
+@media (max-width: 430px)
+{
+    *
+    {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box ;
+    }
+    #login #content
+    {
+        border: 2px solid black;
+        /* justify-content: center; */
+        width: 400px;
+    }
+    #login #content h3
+    {
+        font-size: 20px;
+    }
+    #login #content input
+    {
+        width: 100px;
+    }
+    #login #content a #button
+    {
+        width: 50px;
+    }
+}

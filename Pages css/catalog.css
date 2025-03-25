@@ -152,12 +152,15 @@ h1{
     height: 200px;
     width: 100%;
     border: 1px solid black;
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
 }
-.ktm{
-    background-image: url(/CATALOG/ktm\ cata.jpeg);
-    background-size: 350px 200px;
-    background-repeat: no-repeat;
+.ktm img{
+    /* background-image: url(/CATALOG/ktm\ cata.jpeg); */
+    /* background-size: 350px 200px; */
+    /* background-repeat: no-repeat; */
+    width: 250px;
+    height: 150px;
 }
 .bmw{
     background-image: url(/CATALOG/bmw\ cata.jpeg);
