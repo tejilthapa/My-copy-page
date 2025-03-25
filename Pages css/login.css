@@ -1,128 +1,89 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /* background-color: black; */
-    transition: all ease-in;
+    font-family: Arial, sans-serif;
 }
 
-/* header starts here */
-
-#navbar img
-{
-    width: 175px;
-    height: 30px;
-    margin-left: 43%;
-    margin-top: 1%;
-}
-/* header ends here */
-
-/* main starts here */
-
-#login
-{
-    background-image: url(/bgimg/login_bg_img.jpg);
-    background-position: center;
+body {
+    background: url(/bgimg/login_bg_img.jpg) no-repeat center center;
+    background-size: cover;
     height: 100vh;
-    padding-top: 13%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#login #content
+.container
 {
-    margin-left: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: slideIn 3s ease-in forwards 2s;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.loginbox {
+    background: #fff;
     padding: 20px;
-    border: 3px solid rgb(0, 0, 0);
-    height: 350px;
-    width: 30%;
-    box-shadow: 10px 10px 10px ;
+    box-shadow: 5px 5px 2px black;
+    border-radius: 8px;
     text-align: center;
-    background-color: white;
-    border-radius: 30px;
+    width: 300px;
 }
-#login #content h3{
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    font-size: 30px;
-}
-#login #button
-{
-    width: 11%;
-    height: 20px;
-    background-color: black;
-    color: white;
-    transition: 1s ease-out;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: move 5s ease-out infinite;
-}
-@keyframes move{
-    0%{background-color: black;}
-    50%{background-color: rgb(255, 0, 0);}
-    100%{background-color: rgb(0, 0, 0);}
-}
-#login #button:hover
-{
-    background-color: red;
-    color: black;
-}
-#login #fp{
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-}
-#login #signup
-{
-    height: 15px;
-    width: 15%;
-    background-color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 25px;
-    transition: 1s;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: move 5s ease-out infinite;
-}
-@keyframes move{
-    0%{background-color: black;}
-    50%{background-color: rgb(255, 0, 0);}
-    100%{background-color: rgb(0, 0, 0);}
-}
-#login #signup:hover
-{
-    /* color: rgb(0, 0, 0); */
-    /* background-color: rgb(255, 0, 0); */
-}
-main img
-{
-    height: 100vh;
-    width: 100%;
-}
-/* main ends here  */
 
-/* responsive */
-@media (max-width: 430px)
-{
-    *
-    {
-        margin: 0%;
-        padding: 0%;
-        box-sizing: border-box ;
-    }
-    #login #content
-    {
-        border: 2px solid black;
-        /* justify-content: center; */
-        width: 400px;
-    }
-    #login #content h3
-    {
-        font-size: 20px;
-    }
-    #login #content input
-    {
-        width: 100px;
-    }
-    #login #content a #button
-    {
-        width: 50px;
-    }
+.loginbox .logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ff0000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #000000;
+}
+.loginbox p {
+    margin-top: 10px;
+}
+
+.loginbox a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.loginbox a:hover {
+    text-decoration: underline;
 }

@@ -128,10 +128,9 @@
     }
     .nav-links li a:hover
     {
-        /* color: #ff0000; */
+        color: #ff0000;
     }
 
-    /* Show menu when checkbox is checked */
     #menu-toggle:checked + .menu-icon + .nav-links {
         display: flex;
         color: white;
@@ -139,6 +138,7 @@
     #home video
     {
         margin-top: 0%;
+        padding: 0%;
     }
 }
 
@@ -150,7 +150,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    padding-top: 7%;
+    padding: 3%;
 }
 main h1{
     text-align: center;

@@ -92,22 +92,6 @@
 
 /* Responsive styles */
 @media (max-width: 430px) {
-    .logo a img{
-        width: 120px;
-    }
-    .menu-icon {
-        display: block;
-        color: black;
-    }
-    .icons{
-        display: none;
-    }
-    .call{
-        display: none;
-    }
-    .nav-links{
-        display: none;
-    }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -115,92 +99,96 @@
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #ffffff;
+        background-color: #333;
+        padding: 10px 0;
         text-align: center;
     }
-
-    .nav-links li {
-        margin: 10px;
-    }
-    .nav-links li a:hover
-    {
-        /* color: #ff0000; */
-    }
-
-    /* Show menu when checkbox is checked */
     #menu-toggle:checked + .menu-icon + .nav-links {
         display: flex;
-        color: white;
     }
-    .info{
+    .menu-icon {
+        display: block;
+    }
+
+    .icons {
+        display: none;
+    }
+    body
+    {
         justify-content: center;
     }
 }
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 100px;
+    }
+
+    .call {
+        display: none    }
+}
 /* header ends here */
 
-main{
-    margin-top: 5%;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
-h1{
+h1 {
     text-align: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 2px 2px 2px red;
-    padding-top: 0px;
+    margin: 20px 0;
+    text-shadow: 3px 3px 3px red;
 }
-#bikes div
-{
-    height: 200px;
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.bike {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.bike img {
     width: 100%;
-    border: 1px solid black;
-    /* text-align: center; */
-    display: flex;
-}
-.ktm img{
-    /* background-image: url(/CATALOG/ktm\ cata.jpeg); */
-    /* background-size: 350px 200px; */
-    /* background-repeat: no-repeat; */
-    width: 250px;
     height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
 }
-.bmw{
-    background-image: url(/CATALOG/bmw\ cata.jpeg);
-    background-size: 350px 250px;
-    background-repeat: no-repeat;
+.bike:hover {
+    transform: scale(1.05);
 }
-.yamahar1{
-    background-image: url(/CATALOG/yamahar1.jpeg);
-    background-size: 350px 200px;
-    background-repeat: no-repeat;
+.bike h2 {
+    font-size: 18px;
+    margin: 10px 0;
 }
-.ducati{
-    background-image: url(/CATALOG/ducati\ cata.jpeg);
-    background-size: 320px 200px;
-    background-repeat: no-repeat;
+.bike p {
+    font-size: 14px;
+    color: #555;
 }
-.mt10{
-    background-image: url(/CATALOG/mt10\ cata.jpeg);
-    background-size: 300px 220px;
-    background-repeat: no-repeat;
+.bike button {
+    padding: 10px;
+    background-color: #c10000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }
-.aprilia{
-    background-image: url(/CATALOG/aprilia-cata.jpeg);
-    background-size: 300px 200px;
-    background-repeat: no-repeat;
+.bike button:hover {
+    background-color: #000000;
 }
-.z900{
-    background-image: url(/CATALOG/z900\ cata.jpeg);
-    background-size: 350px 200px;
-    background-repeat: no-repeat;
-}
-.h2r{
-    background-image: url(/CATALOG/ninja-h2r-cata.jpeg);
-    background-size: 350px 200px;
-    background-repeat: no-repeat;
-}
-a{
-    text-decoration: none;
-    text-decoration-color: black;
-}
-a:hover{
-    color: red;
+
+/* Responsive Design */
+@media (max-width: 430px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
