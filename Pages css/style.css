@@ -199,7 +199,8 @@ main h1{
 
 @media(max-width:600px)
 {
-#navbar div nav ul li{
+#navbar div nav ul li
+{
     display: none;
 }
 }
