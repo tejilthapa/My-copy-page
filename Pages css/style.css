@@ -94,7 +94,6 @@
     display: none;
 }
 
-/* Responsive styles */
 @media (max-width: 430px) {
     .logo a img{
         width: 120px;
@@ -115,7 +114,7 @@
     .nav-links {
         display: none;
         flex-direction: column;
-        position: fixed;
+        position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
