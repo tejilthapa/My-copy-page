@@ -21,7 +21,7 @@ body {
     justify-content: center;
     height: 70vh;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: slideIn 3s ease-in forwards;
+    animation: slideIn 1.5s ease-in forwards;
 }
 @keyframes slideIn {
     from {
