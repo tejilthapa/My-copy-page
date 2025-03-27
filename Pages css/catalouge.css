@@ -6,15 +6,6 @@
     scroll-behavior: smooth;
     /* background-color: black; */
 }
-#bar
-{
-    display: none;
-}
-#check
-{
-    display: none;
-}
-
 
 /* header starts here */
 
@@ -90,53 +81,6 @@
     display: none;
 }
 
-/* Responsive styles */
-@media (max-width: 430px) {
-    .logo a img{
-        width: 120px;
-    }
-    .menu-icon {
-        display: block;
-        color: black;
-    }
-    .icons{
-        display: none;
-    }
-    .call{
-        display: none;
-    }
-    .nav-links{
-        display: none;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        text-align: center;
-    }
-
-    .nav-links li {
-        margin: 10px;
-    }
-    .nav-links li a:hover
-    {
-        color: #ff0000;
-    }
-
-    #menu-toggle:checked + .menu-icon + .nav-links {
-        display: flex;
-        color: white;
-    }
-    #home video
-    {
-        margin-top: 0%;
-        padding: 0%;
-    }
-}
 /* header ends here */
 
 body {
@@ -169,7 +113,7 @@ h1 {
 .bike img {
     width: 100%;
     height: 150px;
-    object-fit: cover;
+    /* object-fit: ; */
     border-radius: 10px;
 }
 .bike:hover {
@@ -196,9 +140,47 @@ h1 {
     background-color: #000000;
 }
 
-/* Responsive Design */
-@media (max-width: 430px) {
-    .catalog {
-        grid-template-columns: repeat(2, 1fr);
+/* Responsive styles */
+@media ( max-width: 440px )
+{
+    .logo a img{
+        width: 120px;
+    }
+    .menu-icon {
+        display: block;
+        color: black;
+    }
+    .navbar .icons{
+        display: none;
+    }
+    .navbar .call{
+        display: none;
+    }
+    .navbar .nav-links{
+        display: none;
+    }
+    header .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px;
+    }
+    .nav-links li a:hover
+    {
+        color: #ff0000;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+        z-index: 999;
+        background-color: gray;
     }
 }

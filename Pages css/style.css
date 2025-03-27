@@ -130,6 +130,7 @@
     #menu-toggle:checked + .menu-icon + .nav-links {
         display: flex;
         z-index: 999;
+        background-color: rgb(170, 170, 170);
     }
     .video
     {
